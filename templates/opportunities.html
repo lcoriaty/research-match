@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="page-header">
+    <p class="eyebrow">Illustrative Opportunity Examples</p>
+    <h1>Research opportunities across universities.</h1>
+    <p>
+        These sample listings are modeled after public undergraduate research pathways
+        at universities across the country. In the full platform, listings would be verified
+        through professors, research teams, campus ambassadors, and university partners.
+    </p>
+</section>
+
+<div class="grid">
+    {% for opportunity in opportunities %}
+    <div class="card opportunity-card">
+        <div class="card-topline">{{ opportunity.university }}</div>
+
+        <h2>{{ opportunity.title }}</h2>
+
+        <p class="muted-text"><strong>{{ opportunity.organization }}</strong></p>
+        <p><strong>Academic area:</strong> {{ opportunity.department }}</p>
+
+        <p>{{ opportunity.description }}</p>
+
+        <div class="detail-row">
+            <strong>Commitment</strong>
+            <span>{{ opportunity.commitment }}</span>
+        </div>
+
+        <div class="detail-row">
+            <strong>Format</strong>
+            <span>{{ opportunity.type }}</span>
+        </div>
+
+        <p><strong>Relevant skills:</strong></p>
+        <div class="tag-row">
+            {% for skill in opportunity.skills %}
+            <span>{{ skill }}</span>
+            {% endfor %}
+        </div>
+
+        <p><strong>Research interests:</strong></p>
+        <div class="tag-row light-tags">
+            {% for interest in opportunity.interests %}
+            <span>{{ interest }}</span>
+            {% endfor %}
+        </div>
+
+        <p class="source-note">{{ opportunity.source }}</p>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

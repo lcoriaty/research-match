@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="page-header">
+    <p class="eyebrow">Early Access</p>
+    <h1>Join the ResearchMatch waitlist.</h1>
+    <p>
+        ResearchMatch is developing a national platform for undergraduate research discovery.
+        Join the early network as a student, professor, research team, campus ambassador,
+        or university organization.
+    </p>
+</section>
+
+<section class="waitlist-layout">
+    <div class="waitlist-copy">
+        <h2>Who should join?</h2>
+
+        <div class="mini-card">
+            <h3>Students</h3>
+            <p>Discover research opportunities that align with your academic interests, skills, and long-term goals.</p>
+        </div>
+
+        <div class="mini-card">
+            <h3>Professors and Research Teams</h3>
+            <p>Reach students who are actively seeking meaningful undergraduate research involvement.</p>
+        </div>
+
+        <div class="mini-card">
+            <h3>Campus Ambassadors</h3>
+            <p>Help identify research pathways, build university-specific networks, and expand access on your campus.</p>
+        </div>
+
+        <div class="mini-card">
+            <h3>University Organizations</h3>
+            <p>Partner with ResearchMatch to help members find research opportunities earlier and more efficiently.</p>
+        </div>
+    </div>
+
+    <form method="POST" class="waitlist-form">
+        <label>Name</label>
+        <input type="text" name="name" placeholder="Example: Lucas Coriaty" required>
+
+        <label>Email</label>
+        <input type="email" name="email" placeholder="Example: lucas@email.com" required>
+
+        <label>University or school</label>
+        <input type="text" name="school" placeholder="Example: Northwestern University" required>
+
+        <label>Your role</label>
+        <select name="role" required>
+            <option value="">Select one</option>
+            <option value="Student">Student</option>
+            <option value="Professor / Researcher">Professor / Researcher</option>
+            <option value="Campus Ambassador">Campus Ambassador</option>
+            <option value="University Club / Organization">University Club / Organization</option>
+            <option value="Other">Other</option>
+        </select>
+
+        <label>What are you hoping to do through ResearchMatch?</label>
+        <textarea name="interests" placeholder="Example: find research opportunities, recruit student researchers, become a campus ambassador, or build a university partnership." required></textarea>
+
+        <label>How did you hear about ResearchMatch?</label>
+        <input type="text" name="how_found" placeholder="Example: friend, professor, campus organization, LinkedIn, founder outreach">
+
+        <button type="submit">Join Waitlist</button>
+    </form>
+</section>
+
+{% endblock %}

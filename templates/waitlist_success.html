@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="success-section">
+    <div class="success-card">
+        <p class="eyebrow">You're on the list</p>
+
+        <h1>Welcome to ResearchMatch, {{ person.name }}.</h1>
+
+        <p>
+            Thanks for joining as a <strong>{{ person.role }}</strong> from
+            <strong>{{ person.school }}</strong>.
+        </p>
+
+        <p>
+            We are building a national research network powered by students, professors,
+            campus ambassadors, and university communities.
+        </p>
+
+        <div class="success-actions">
+            <a class="primary-button" href="/opportunities">Explore Sample Opportunities</a>
+            <a class="secondary-button" href="/">Back to Home</a>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
