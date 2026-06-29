@@ -749,3 +749,42 @@ button:hover {
         padding-top: 64px;
     }
 }
+
+.intro-panel {
+    max-width: 1060px;
+    margin: 0 auto 26px;
+    padding: 42px 34px;
+    background: rgba(255,255,255,0.94);
+    border: 1px solid var(--border);
+    border-radius: 30px;
+    box-shadow: 0 24px 70px rgba(15, 23, 42, 0.07);
+}
+
+.intro-panel h2 {
+    font-size: clamp(32px, 4vw, 46px);
+    line-height: 1.08;
+    letter-spacing: -0.055em;
+    margin: 0 0 16px;
+}
+
+.intro-panel p {
+    color: var(--slate);
+    font-size: 18px;
+    line-height: 1.72;
+    margin: 0;
+}
+
+.intro-panel .eyebrow {
+    color: var(--blue);
+    margin-bottom: 14px;
+}
+
+.preview-explainer {
+    position: relative;
+    margin-top: 24px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(255,255,255,0.14);
+    color: #cbd5e1;
+    font-size: 14px;
+    line-height: 1.6;
+}

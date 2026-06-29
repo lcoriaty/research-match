@@ -102,6 +102,7 @@ def waitlist_page():
             "email": request.form.get("email"),
             "school": request.form.get("school"),
             "role": request.form.get("role"),
+            "research_area": request.form.get("research_area"),
             "interests": request.form.get("interests"),
             "how_found": request.form.get("how_found")
         }
